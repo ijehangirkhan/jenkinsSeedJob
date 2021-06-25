@@ -2,7 +2,7 @@ freeStyleJob('SeedJob') {
     scm {
             git {
                 // Specify the branches to examine for changes and to build.
-                    branch('*/master')
+                    branch("*/master")
 
                 // Specify the branches to examine for changes and to build.
                 // branches(String... branches)
@@ -38,7 +38,9 @@ freeStyleJob('SeedJob') {
 
     steps {
             dsl {
-                external('jobs/*.groovy')
+                external("jobs/*.groovy")
             }
     }
+}
+
 }
